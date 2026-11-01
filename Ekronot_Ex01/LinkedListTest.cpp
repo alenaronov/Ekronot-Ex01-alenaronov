@@ -24,7 +24,7 @@ int main()
 	printf("List created (empty).\n");
 	printList(head);
 
-	printf("Adding 11 to the list...\n");
+	printf("Adding 1 to the list...\n");
 	addToHead(&head, 1);
 	printList(head);
 
