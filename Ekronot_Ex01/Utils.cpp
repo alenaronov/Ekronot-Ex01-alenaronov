@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <iostream>
 #include "Utils.h"
 #include "Stack.h"
 
@@ -29,7 +29,7 @@ void reverse(int* nums, unsigned int size)
 }
 
 /*
- reads 10 integers from the user, and returns a new array
+ reads 10 integers from the user (using std::cin), and returns a new array
  with the numbers in reverse order.
  the array is allocated dynamically, so the caller must delete[] it.
 */
@@ -40,11 +40,7 @@ int* reverse10()
 
 	for (i = 0; i < 10; i++)
 	{
-		// scanf returns the number of values read, it should be 1
-		if (scanf("%d", &nums[i]) != 1)
-		{
-			nums[i] = 0; // reading failed, use 0 as a default value
-		}
+		std::cin >> nums[i];
 	}
 
 	reverse(nums, 10);
